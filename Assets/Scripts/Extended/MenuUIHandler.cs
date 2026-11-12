@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 using UnityEditor;
 #endif
 
+[DefaultExecutionOrder(1000)]
+
 public class MenuUIHandler : MonoBehaviour
 {
     public ColorPicker ColorPicker;
@@ -14,6 +16,7 @@ public class MenuUIHandler : MonoBehaviour
     private void Start()
     {
         ColorPicker.Init();
+        //calls the NewColorSelected function when the color picker has a color button clickled
         ColorPicker.onColorChanged += NewColorSelected;
         
         //when the menu load we set the color picker to the right color
